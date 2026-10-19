@@ -15,6 +15,19 @@ path = "throughput.rs"
 name = "pipeline"
 path = "pipeline.rs"
 
+[[bin]]
+name = "latency_new"
+path = "latency_new.rs"
+
+[[bin]]
+name = "throughput_new"
+path = "throughput_new.rs"
+
+[[bin]]
+name = "pipeline_new"
+path = "pipeline_new.rs"
+
 [dependencies]
 md5 = "0.8.1"
 rand = "0.10.3"
+libc = "0.2.191"

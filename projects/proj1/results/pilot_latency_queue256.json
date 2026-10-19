@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-19T18:29:06.486005+00:00",
+  "arguments": {
+    "program": "latency",
+    "file": "data/latency.bin",
+    "size_mib": 32,
+    "blocks": [
+      512,
+      4096,
+      65536
+    ],
+    "threads": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "ks": [
+      1,
+      1000,
+      4000,
+      16000,
+      64000
+    ],
+    "cache": [
+      "warm",
+      "cold"
+    ],
+    "repeats": 2,
+    "output": "results/pilot_latency_queue256.csv",
+    "skip_build": true
+  },
+  "kernel": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "cpu": "Architecture:                         x86_64\nCPU op-mode(s):                       32-bit, 64-bit\nAddress sizes:                        39 bits physical, 48 bits virtual\nByte Order:                           Little Endian\nCPU(s):                               12\nOn-line CPU(s) list:                  0-11\nVendor ID:                            GenuineIntel\nModel name:                           13th Gen Intel(R) Core(TM) i7-1355U\nCPU family:                           6\nModel:                                186\nThread(s) per core:                   2\nCore(s) per socket:                   6\nSocket(s):                            1\nStepping:                             3\nBogoMIPS:                             5222.42\nFlags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities\nVirtualization:                       VT-x\nHypervisor vendor:                    Microsoft\nVirtualization type:                  full\nL1d cache:                            288 KiB (6 instances)\nL1i cache:                            192 KiB (6 instances)\nL2 cache:                             7.5 MiB (6 instances)\nL3 cache:                             12 MiB (1 instance)\nNUMA node(s):                         1\nNUMA node0 CPU(s):                    0-11\nVulnerability Gather data sampling:   Not affected\nVulnerability Itlb multihit:          Not affected\nVulnerability L1tf:                   Not affected\nVulnerability Mds:                    Not affected\nVulnerability Meltdown:               Not affected\nVulnerability Mmio stale data:        Not affected\nVulnerability Reg file data sampling: Mitigation; Clear Register File\nVulnerability Retbleed:               Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:   Not affected\nVulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S\nVulnerability Srbds:                  Not affected\nVulnerability Tsx async abort:        Not affected\n",
+  "memory": "MemTotal:        7949512 kB\nMemFree:         2657700 kB\nMemAvailable:    3493680 kB\nBuffers:            9352 kB\nCached:           902724 kB\nSwapCached:           68 kB\nActive:           777356 kB\nInactive:        3945652 kB\nActive(anon):       6708 kB\nInactive(anon):  3807892 kB\nActive(file):     770648 kB\nInactive(file):   137760 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:       2097152 kB\nSwapFree:        2094568 kB\nDirty:              2636 kB\nWriteback:            64 kB\nAnonPages:       3810408 kB\nMapped:           571136 kB\nShmem:              4024 kB\nKReclaimable:     123632 kB\nSlab:             218824 kB\nSReclaimable:     123632 kB\nSUnreclaim:        95192 kB\nKernelStack:       12164 kB\nPageTables:        71132 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     6071908 kB\nCommitted_AS:    7565260 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       37504 kB\nVmallocChunk:          0 kB\nPercpu:             7488 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       95232 kB\nDirectMap2M:     6010880 kB\nDirectMap1G:    10485760 kB\n",
+  "rust": "rustc 1.99.1 (58cf8f9c3 2026-10-13)",
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "sources": {
+    "src/throughput.rs": "a242d9b4fff9760a73150c05e1a99ba1f4122df3b517f9e6c11f26973e7df21a",
+    "src/pipeline.rs": "4b852219a8cd061bc6fc11e3be6967d47dd5229e359b251e45aabeed0a3df6c9",
+    "src/hash.rs": "b0da585d98c109bd03bf87bffb4a88fdc36fb9ffc2d6c707b71daa5f330fff65",
+    "src/latency.rs": "6d6dd184f3581cb11c33e85364a2be583cb84b33320039bbf95163cb61b3078e",
+    "src/pipeline_new.rs": "17995620295eef1e21e5ceacc02f6a5af38b15d76a49f78d908496d2fe994fd6",
+    "src/throughput_new.rs": "57459e84d1878553a746b6cdcfc9a4c72d63586aedf1a9ff90c474a4de047064",
+    "src/latency_new.rs": "cb077b3493531fc3e1dc7aba57490eac1779cb610f4c1ed8ff5b321367c604de"
+  }
+}
