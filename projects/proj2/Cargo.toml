@@ -1,0 +1,7 @@
+[package]
+name = "proj2"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+lz4_flex = { version = "0.11.6", default-features = false, features = ["std", "safe-encode", "safe-decode", "checked-decode"] }
